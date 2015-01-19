@@ -1,0 +1,26 @@
+	<div ng-controller="postController" ng-init="newPostInit()" >
+	
+		<div class="heroEditable">
+			<p></p>
+			<div class="hero-image hero-a-great-story"></div>			
+		</div>
+    
+        <div class="container">
+        <div class="row">        	
+        <div class="col-xs-12 main-content single-content">
+        	Select categories
+        <select ng-model="selectedCategoryId" ng-options="category.categoryid as category.categoryname  for category in categories"></select>
+        
+            <h2 class="title-editable"></h2>
+            <div class="editable"> 
+            <p>
+            Write your story here.
+            </p>       
+            </div>
+        </div><!-- main-content/col -->
+        </div> <!--/row -->
+          	<div class="social clearfix">
+                <a class="btn btn-writer btn-like" ng-click="createNewPost()"><i class="entypo-heart"></i>Save</a>
+            </div>
+    </div> <!-- /container -->
+    

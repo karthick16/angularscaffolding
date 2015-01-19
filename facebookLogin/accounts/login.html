@@ -1,0 +1,50 @@
+
+<body>
+	<button type="button" id="login" ng-click="login()">login</button>
+	<button type="button" id="api" ng-click="api()">api user data call</button>
+	<button type="button" id="remove_auth" ng-click="removeAuth()">remove auth</button>
+	<pre>isReady: <span id="is_ready" ng-bind="facebookIsReady"></span></pre>
+	<pre>status: <span id="login_status" ng-bind="loginStatus"></span></pre>
+	<pre>username: <span id="api_first_name" ng-bind="user.first_name"></span></pre>
+</body>
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="container" ng-controller="loginController">
+<!--
+	<form class="form-signin">
+		<h2 class="form-signin-heading">Please sign in</h2>
+		<input type="text" class="input-block-level" placeholder="Email address">
+		<input type="password" class="input-block-level" placeholder="Password">
+		<label class="checkbox">
+			<input type="checkbox" value="remember-me"> Remember me
+		</label>
+		<button class="btn btn-large btn-primary" type="submit">Sign in</button>
+	</form>
+-->
+<!--
+	<div class="jumbotron text-center">
+		<h1><span class="fa fa-lock"></span> LiF Login</h1>
+
+		<p>Login or Register with:</p>
+
+		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Local Login</a>
+		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Local Signup</a>
+		<!-- <a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a> -->
+<!--		
+		<button class="btn btn-primary" ng-click="login()" ng-disabled="loginStatus.status == 'connected'">Connect with Facebook</button>
+		<button class="btn btn-danger" ng-click="logout()" ng-disabled="!loginStatus || loginStatus.status != 'connected'">Logout</button>
+		<p>{{loginStatusJSON}}</p>
+		<br>
+		<p>{{apiMeJSON}}</p>
+	</div>
+</div>
+-->

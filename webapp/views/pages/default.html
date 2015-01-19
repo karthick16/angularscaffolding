@@ -1,0 +1,90 @@
+<div class="container home-container" ng-controller="defaultController" ng-init="initializeController()">
+
+<div class="row">
+
+	<div class="sidebar col-md-5 col-sm-12 ">
+
+               <div ng-include="'views/pages/includes/menubarsign.html'" ng-hide="true"></div>
+                <div class="site-info">
+                    <div class="primary-info">
+                    <h1>Writer</h1>
+                        <p>A minimal blogging theme to put your content on show. <a href="">Look at the features.</a> </p>
+
+                        <p>Content is king</p>
+                    </div>
+                    <div class="secondary-info">
+
+                        <p><a class="btn btn-writer btn-post" href="#"><i class="entypo-doc-text"></i>Join Us</a> or <a href="#/newpost/id">Share your story</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+
+                <div class="nav">
+                    <a ng-click="togglePostOrCategory('post')" class="select-posts active">Posts</a>
+                    <a ng-click="togglePostOrCategory('category')" class="select-categories">Categories</a>
+                </div>
+
+                <div class="home-page-posts animated fadeIn" ng-show="showPost" >
+                <div class="post" ng-repeat="profile in featuredProfileList">
+                    <section>
+                        <div class="post-preview col-xs-10  no-gutter">
+
+                        <h2><a href="#/post/{{profile.userid}}/{{profile.postid}}" ng-bind-html='profile.postTitle'></a></h2>
+                        <p> </p>
+
+                        <p class="meta">
+                            <a class="" href="#/{{profile.userid}}">{{profile.name}}</a> in <a class="" href="#/profile/{{profile.userid}}/{{profile.categoryid}}">{{profile.categoryname}}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> 23 minute read
+                        </p>
+                        </div>
+
+                        <div class=" col-xs-2  no-gutter">
+                            <img ng-src="assets/img/seed/{{profile.userid}}/profile_pic_small.jpg" class="user-icon user-1" alt="user-image">
+                        </div>
+
+                    </section>
+                </div>
+			</div><!-- Home page posts -->
+            <div class="home-page-categories animated fadeIn " ng-show="!showPost">
+                <div class="category row">
+                    <section>
+                        <div class="category-preview col-xs-6 col-sm-4 " ng-repeat="category in categories">
+                            <h2>{{category.categoryname}}</h2>
+                            <input type="hidden" value="{{category.categoryid}}"></span>
+                            <a href="#/category/{{category.categoryid}}"><img ng-src="assets/img/cat_{{category.categoryid}}.jpg" alt="category-image"></a>
+                        </div>
+
+                        <!-- <div class="category-preview col-xs-6 col-sm-4 ">
+                            <h2>Movie</h2>
+                            <a href="category.html"><img src="assets/img/cover-4.jpg" alt="category-image"></a>
+                        </div>
+
+                        <div class="category-preview col-xs-6 col-sm-4 ">
+                            <h2>Movie Star</h2>
+                            <a href="category.html"><img src="assets/img/cover-13.jpg" alt="category-image"></a>
+                        </div>
+
+                        <div class="category-preview col-xs-6 col-sm-4 ">
+                            <h2>Childhood Memories</h2>
+                             <a href="category.html"><img src="assets/img/cover-9.jpg" alt="category-image"></a>
+                        </div>
+
+                        <div class="category-preview col-xs-6 col-sm-4 ">
+                            <h2>Sports</h2>
+                            <a href="category.html"><img src="assets/img/cover-1.jpg" alt="category-image" ></a>
+                        </div>                       
+                        <div class="category-preview col-xs-6 col-sm-4 ">
+                            <h2>Music/Band</h2>
+                             <a href="category.html"><img src="assets/img/cover-12.jpg" alt="category-image"></a>
+                        </div> -->
+                    </section>
+                </div>
+            </div>
+            
+            </div><!-- main content -->
+    </div>        
+</div>   
+
+      

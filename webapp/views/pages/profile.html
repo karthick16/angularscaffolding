@@ -1,0 +1,34 @@
+      <div ng-controller="profileController" ng-init="initializeController()">
+            <div class="sidebar sidebar-fav col-md-5 col-sm-12" style="background:url(assets/img/seed/{{userid}}/profile_pic.jpg) no-repeat center center">
+            
+               <div ng-include="'views/pages/includes/menubarsign.html'" ng-hide="true"></div>
+                               
+                <div class="site-info">
+                    <div class="primary-info">
+                    <h1>{{user.name}}</h1>                        
+                    </div>
+			</div>
+            </div>
+            
+            <div class="col-md-7 col-sm-12 col-md-offset-5 main-content">                
+            <div class="favorites">
+                    <h2>Categories I wrote on </h2>
+            </div>
+
+           <div class="home-page-categories animated fadeIn">
+                <div class="category row">
+                    <section>
+                        <div class="category-preview col-xs-6 col-sm-4 " ng-repeat="category in categories">
+                            <h2>{{category.description}}</h2>
+                            <a href="#/profile/{{userid}}/{{category.categoryid}}">
+                            	<img ng-src="assets/img/seed/{{userid}}/{{category.categoryname}}/profile_pic_modified.jpg" alt="category-image" style="background-position:center">
+                            </a>
+                        </div>                         
+                    </section>
+                </div>
+            </div>
+            <div ng-include="'views/pages/includes/footer.html'"></div>
+
+            </div><!-- main content -->
+            
+           </div> 

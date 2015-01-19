@@ -1,0 +1,38 @@
+	<div ng-controller="postController" ng-init="initializeController()" >
+	
+	<div ng-include="'views/pages/includes/menubarsign.html'" ng-hide="true"></div>		
+		<div class="heroEditable">
+			<div class="hero-image hero-a-great-story" style="background:url('/uploads/post/aspectratio/{{post.postid}}_posthero.jpg') no-repeat center center fixed;background-size:cover"></div>				
+		</div>
+   	
+        <div class="container">
+        <div class="row">
+
+        <div id="menu">
+            <ul>
+                <li><i class="entypo-home"></i><a href="index.html">Home</a></li>
+                <li><i class="entypo-user"></i><a href="">John Smith</a></li>
+                <li><i class="entypo-star"></i><a href="favorites.html">Favorites</a></li>
+                <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+
+            </ul>
+        </div>
+        <div class="col-xs-12 main-content single-content">
+            <p class="meta">
+                <a class="" href="category.html">{{post.name}}</a> in <a class="" href="category.html">{{post.categoryname}}</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> 23 minute read
+            </p>
+                            <a class="btn btn-writer btn-like" href="#/editpost/{{post.userid}}/{{post.postid}}"><i class="entypo-heart"></i>Edit post</a>
+            <h1 class="title-editable" ng-bind-html='post.postTitle'></h1>
+            <div class="editable" ng-bind-html='post.postBody'> 
+            
+		</div>
+
+        
+		
+        </div><!-- main-content/col -->
+
+
+        </div> <!--/row -->
+
+    </div> <!-- /container -->
+    

@@ -1,0 +1,57 @@
+<div ng-controller="postController" ng-init="userPostForCategory()">
+        	
+            <div class="sidebar category-sidebar sidebar-storytime col-md-5 col-sm-12 " style="background:url(assets/img/seed/{{userid}}/{{posts[0].categoryname}}/profile_pic.jpg)  no-repeat;background-size:cover;background-position:center">
+
+              <div ng-include="'views/pages/includes/menubarsign.html'" ng-hide="true"></div>
+
+                <!-- if the user has javascript disabled they can still use the menu -->
+                <noscript>
+                    <div class="no-js-menu">
+                        <ul>
+                            <li><i class="entypo-home"></i><a href="index.html">Home</a></li>
+                            <li><i class="entypo-user"></i><a href="#">John Smith</a></li>
+                            <li><i class="entypo-star"></i><a href="favorites.html">Favorites</a></li>
+                            <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+                        </ul>
+                    </div>
+                </noscript>
+                <!-- end no script -->
+
+                <div class="site-info">
+                    <div class="primary-info">
+                    <b><h1>{{user.movie}}</h1></b>                        
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+
+                <div class="nav">
+                    <a href="#" class="select-posts active">Posts</a>
+                </div>
+
+                <div class="category-page-posts animated fadeIn ">
+                <div class="post" ng-repeat="post in posts">
+                    <section>
+                        <div class="post-preview col-xs-10  no-gutter">
+
+                        <h2><a href="#/post/{{post.userid}}/{{post.postid}}" ng-bind-html="post.postTitle"> </a></h2>
+                        <p>{{user.postExcerpts}}</p>
+
+                        <p class="meta">
+                            <i class="entypo-bookmark"></i> 23 minute read
+                        </p>
+                        </div>
+
+                        <div class=" col-xs-2  no-gutter">
+                            <img ng-src="assets/img/seed/{{post.userid}}/profile_pic_small.jpg" class="user-icon user-1" alt="user-image">
+                        </div>
+
+                    </section>
+                </div>
+            </div><!-- Category page posts -->
+	<div ng-include="'views/pages/includes/footer.html'"></div>
+            </div><!-- main content -->
+
+</div>

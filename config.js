@@ -1,0 +1,1 @@
+exports.database =  'mongodb://admin:admin@ds029801.mongolab.com:29801/lif';

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body>
+
+    <span class="menu-trigger writer-icon menu-dashboard animated fadeInDown">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </span>
+
+    <!-- if the user has javascript disabled they can still use the menu -->
+    <noscript>
+        <div class="no-js-menu no-js-dashboard">
+            <ul>
+                <li><i class="entypo-home"></i><a href="index.html">Home</a></li>
+                <li><i class="entypo-user"></i><a href="#">John Smith</a></li>
+                <li><i class="entypo-star"></i><a href="favorites.html">Favorites</a></li>
+                <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+            </ul>
+        </div>
+    </noscript>
+    <!-- end no script -->
+
+    <div class="container">
+        <div class="row">
+
+        <div id="menu">
+            <ul>
+                <li><i class="entypo-home"></i><a href="index.html">Home</a></li>
+                <li><i class="entypo-user"></i><a href="">John Smith</a></li>
+                <li><i class="entypo-star"></i><a href="favorites.html">Favorites</a></li>
+                <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-12 main-content single-content stats-content">
+
+            <h1><i class="entypo-window"></i>Dashboard</h1>
+            <h3 class="stats-subtitle">These are you stats for November</h3>
+
+            <!-- Graph HTML -->
+            <div id="graph-wrapper">
+                <div class="graph-info">
+                    <a class="visitors">All Readers</a>
+                    <a class="returning">New Readers</a>
+
+                    <a href="#" id="bars">
+                        <i class="entypo-chart-bar"></i>
+                    </a>
+
+                    <a href="#" id="lines" class="active">
+                        <i class="entypo-chart-line"></i>
+                    </a>
+                </div>
+
+                <div class="graph-container">
+                    <div id="graph-lines"></div>
+                    <div id="graph-bars"></div>
+                </div>
+            <!-- end Graph HTML -->
+            </div>
+            <span class="graph-title"> Visitors for November </span>
+
+            <div class="row pie-charts"> <!-- PIE CHARTS -->
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="chart chart-visitors percentage" data-percent="73">
+                        <span >73</span>
+                    </div>
+                    <div class="pie-title">
+                        <h3>Returning visitors </h3>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+
+                    <div class="chart chart-downloads percentage" data-percent="53">
+                        <span>53</span>
+                    </div>
+                    <div class="pie-title">
+                        <h3>Sharing Rate </h3>
+                    </div>
+                </div>
+            </div><!-- END PIE ROW -->
+
+            <div class="row">
+                <div class="top-posts col-xs-12">
+                    <h2><i class="entypo-trophy"></i> Top 3 posts in November</h2>
+                </div>
+
+                <div class="col-xs-12 col-sm-3 col-md-2">
+                    <span class="view-count">4311</span>
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <h3 class="top-post"> <a href="#">Ten reasons why you should travel, or why the city is killing your inner creative</a></h3>
+                </div>
+
+                 <div class="col-xs-12 col-sm-3 col-md-2">
+                    <span class="view-count">2023</span>
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <h3 class="top-post"> <a href="#"> How to write your was to success</a></h3>
+                </div>
+
+                 <div class="col-xs-12 col-sm-3 col-md-2">
+                    <span class="view-count">749</span>
+                </div>
+
+                <div class="col-xs-12 col-sm-9 col-md-10">
+                    <h3 class="top-post"><a href="#">Its not always that simple</a></h3>
+                </div>
+
+            </div>
+
+
+        </div><!-- main-content/col -->
+
+        </div> <!--/row -->
+
+    </div> <!-- /container -->
+
+          <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/jquery.jpanelmenu.min.js"></script>
+        <script src="js/vendor/jquery.flot.min.js"></script>
+        <script src="js/vendor/jquery.flot.resize.min.js"></script>
+        <script src="js/vendor/jquery.easypiechart.min.js"></script>
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
